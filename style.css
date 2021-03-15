@@ -1,0 +1,95 @@
+@font-face {
+  font-family: "Dubai";
+  src: url("./assets/fonts/Dubai-Regular.ttf") format("ttf");
+}
+
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Dubai', sans-serif;
+  color: #293179;
+  font-size: 18px;
+}
+
+.main {
+  max-width: 600px;
+  max-height: 100vh;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+
+}
+
+.logo {
+  width: 70px;
+  height: 100px;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+}
+
+.digital {
+  padding-bottom: 30px;
+  border-bottom: 2px solid #293179;
+}
+
+nav {
+  padding-top: 10px;
+}
+
+nav a:hover {
+  color: #6877fa;
+}
+
+nav a:not(:last-child) {
+  margin-right: 60px;
+}
+
+.text {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: justify;
+}
+
+.mail {
+  color: #6877fa
+}
+
+.social {
+  margin-top: 70px;
+}
+
+.social a img {
+  width: 50px;
+  height: 50px;
+}
+
+.social a:not(:last-child) {
+  margin-right: 60px;
+}
+
+@media screen and (max-width: 360px) {
+  nav a:not(:last-child) {
+    margin-right: 30px;
+  }
+  .social a:not(:last-child) {
+    margin-right: 30px;
+  }
+}
