@@ -27,7 +27,7 @@ body {
 
 .main {
   max-width: 600px;
-  max-height: 100vh;
+  height: 100vh;
   margin: 0 auto;
   padding: 20px;
   text-align: center;
@@ -52,28 +52,29 @@ h1 {
 
 nav {
   padding-top: 10px;
+  margin-bottom: 40px;
 }
 
 nav a:hover {
   color: #6877fa;
 }
 
+
 nav a:not(:last-child) {
   margin-right: 60px;
 }
 
 .text {
-  margin-top: 40px;
   margin-bottom: 40px;
   text-align: justify;
 }
 
 .mail {
-  color: #6877fa
+  color: #6877fa;
 }
 
 .social {
-  margin-top: 70px;
+  margin-top: 60px;
 }
 
 .social a img {
@@ -85,6 +86,27 @@ nav a:not(:last-child) {
   margin-right: 60px;
 }
 
+.main__home {
+  display: block;
+}
+
+.main__sercives {
+  display: none;
+}
+
+.main__projects {
+  display: none;
+}
+
+.services__row,
+.projects__row {
+  padding: 13px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
 @media screen and (max-width: 360px) {
   nav a:not(:last-child) {
     margin-right: 30px;
@@ -92,4 +114,14 @@ nav a:not(:last-child) {
   .social a:not(:last-child) {
     margin-right: 30px;
   }
+  .main {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+
+  /* .services__row {
+    flex-wrap: wrap;
+  } */
 }
