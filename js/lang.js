@@ -1,6 +1,6 @@
 const langArr = {
     "intellect": {
-        "ru": "Интеллект. Конфиденциальность. Опыт.",
+        "ru": "Защита. Опыт. Интеллект.",
         "en": "Intellect. Confidentiality. Experience.",
     },
     "digital": {
@@ -25,10 +25,10 @@ const langArr = {
     },
     "home-text-2": {
         "ru": "Консультации, вопросы, предложения:",
-        "en": "If you have any questions or suggestions, please send an e-mail:",
+        "en": "Consultations, questions, suggestions:",
     },
     "services-web": {
-        "ru": "- Создание web сайта",
+        "ru": "- Создание веб сайта",
         "en": "- Website development",
     },
     "services-chat": {

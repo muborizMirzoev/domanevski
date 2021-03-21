@@ -7,10 +7,12 @@
 *,
 *:before,
 *:after {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 
 li,
 a {
@@ -23,6 +25,7 @@ body {
   font-family: 'Dubai', sans-serif;
   color: #293179;
   font-size: 18px;
+  overflow: hidden;
 }
 
 .main {
@@ -35,13 +38,14 @@ body {
 }
 
 .logo {
-  width: 70px;
-  height: 100px;
+  width: 110px;
+  height: 120px;
 }
 
 h1 {
   padding: 0;
-  margin: 0;
+  margin-top: -25px;
+  margin-bottom: 10px;
   font-size: 22px;
 }
 
@@ -51,6 +55,15 @@ h1 {
 }
 
 nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding-top: 10px;
   margin-bottom: 40px;
 }
@@ -60,9 +73,9 @@ nav a:hover {
 }
 
 
-nav a:not(:last-child) {
+/* nav a:not(:last-child) {
   margin-right: 60px;
-}
+} */
 
 .text {
   margin-bottom: 40px;
@@ -101,27 +114,121 @@ nav a:not(:last-child) {
 .services__row,
 .projects__row {
   padding: 13px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: start;
+}
+
+.services__row-creation {
+  min-width: 179px;
+}
+
+.services__row-download {
+  min-width: 105px;
+}
+
+
+.multilang {
+  display: flex;
+}
+
+/* The container */
+.container {
+  display: block;
+  position: relative;
+  padding-left: 7px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Create a custom radio button */
+/* .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+} */
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
 }
 
 
 @media screen and (max-width: 360px) {
-  nav a:not(:last-child) {
-    margin-right: 30px;
-  }
   .social a:not(:last-child) {
     margin-right: 30px;
   }
   .main {
     padding: 10px;
   }
+  .digital {
+    padding-bottom: 15px;
+  }
+  nav {
+    margin-bottom: 20px;
+  }
+  .text {
+    margin-bottom: 20px;
+  }
+  .social {
+    margin-top: 40px;
+  }
 }
 
 @media screen and (max-width: 500px) {
-
-  /* .services__row {
-    flex-wrap: wrap;
-  } */
+  .main {
+    padding-top: 20px;
+  }
+  .services__row {
+    flex-direction: column;
+    text-align: center;
+  }
 }
